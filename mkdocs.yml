@@ -1,0 +1,107 @@
+# Project information
+site_name: csBlog
+site_url: https://datphamvn.github.io/blog/
+site_author: Dat Pham
+
+# Repository
+repo_url: https://github.com/datphamvn/blog
+repo_name: DatPhamVN/Blog
+
+# Configuration
+theme:
+  name: material
+  custom_dir: material
+  font:
+    text: Poppins
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+  icon:
+    repo: fontawesome/brands/github
+
+# Plugins
+plugins:
+  - search
+
+# Customization
+extra:
+  alternate:
+    # Switch to English
+    - name: English
+      link: /
+      lang: en
+
+    # Switch to Vietnamese
+    - name: Vietnamese
+      link: /vi/
+      lang: vi
+
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/datphamvn
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/datphamvn/
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/pvtd264
+
+extra_css:
+  - static/stylesheets/extra.css
+  - static/stylesheets/bs.css
+extra_javascript:
+  - static/javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Extensions
+markdown_extensions:
+#Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+#Code blocks - Need update
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.snippets
+#Content_tabs
+  - pymdownx.tabbed
+  - pymdownx.superfences
+#Other
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - footnotes
+  - attr_list #Image
+  - def_list
+  - pymdownx.arithmatex: # mathjax
+      generic: true
+
+# Page tree
+nav:
+    - Home: index.md
+    - Computer Science:
+#      - 🚀 Foundations:
+#        - computer_science/foundations/index.md
+      - 🔢 Math:
+        - Linear Algebra:
+          - computer_science/maths/linear_algebar/week1.md
+      - 🤖 Machine Learning:
+        - computer_science/ml/index.md
+    - Competitive programing:
+      - ✅ Python:
+        - cp/python/index.md
+      - ✅ C++:
+        - cp/cplusplus/index.md
+      - 🔥 Data Structures and Algorithms:
+        - cp/ds_algorithms/index.md
+    - Study tips: study_tips.md
+    - Other topics: other.md
+
+# Copyright
+copyright: Copyright &copy; 2021 Pham Vu Tuan Dat
+#mkdocs serve
+#mkdocs build
